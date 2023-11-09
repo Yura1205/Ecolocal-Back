@@ -4,7 +4,9 @@
   "description": "Primer",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "test": "jest --coverage --verbose --runInBand --detectOpenHandles --force-exit",
+    "sonar": "sonar-scanner"
   },
   "author": "David Sanchez",
   "license": "ISC",
