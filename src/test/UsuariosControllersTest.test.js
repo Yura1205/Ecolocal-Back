@@ -1,7 +1,7 @@
 const { FindAllUser, CreateUser } = require("../repository/UserRepository");
 const { Response } = require("../utils/Response");
 const { findAll, create } = require("../controllers/UsuariosController");
-const { mockRequest, mockResponse } = require("../test/mocks/mocks");
+const { mockRequest, mockResponse } = require("../test/Mocks");
 
 jest.mock("../repository/UserRepository.js");
 
@@ -37,7 +37,7 @@ const returnUsers = {
 };
 
 const requestUser = {
-    body: {
+  body: {
   password: "123",
   nombres: "stiven",
   apellidos: "barajas",
