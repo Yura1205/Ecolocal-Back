@@ -8,6 +8,7 @@ require("dotenv").config();
 
 //Routes
 const UsuariosRoutes = require("./src/routes/UserRoutes"); 
+const ProductsRoutes = require("./src/routes/ProductsRoutes")
 
 const app = express();
 
@@ -34,6 +35,7 @@ app.get('/status', (req, res) => {
 //Conexion a base de datos
 let MONGODB_URI = `mongodb://${process.env.BD_USER}:${process.env.DB_PASS}@${process.env.DB_HOST}/${process.env.MONGO_DB}?retryWrites=true&authSource=admin`;
 
+
 mongoose
   .connect(MONGODB_URI, {
     useUnifiedTopology: true,
@@ -48,7 +50,8 @@ mongoose
   });
 
 //Setting Routes
-app.use("/api", UsuariosRoutes)  
+app.use("/api", UsuariosRoutes)
+app.use("/api", ProductsRoutes)  
 
 //Export
 module.exports = app;
