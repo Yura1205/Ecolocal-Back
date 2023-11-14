@@ -77,6 +77,12 @@ async function login(req, res){
         bcrypt.compare(params.password, user.result.password, function (err, check) {
             if(check){
                 res.status(200).send({message:"el usuario se encuentra logueado"});
+                /*const token = generarTokenJWT(user.result); // Implementa esta función para generar el token JWT
+                res.status(200).send({
+                    message: "El usuario se encuentra logueado",
+                    jwt: token,
+                    user: user.result
+                }); */
             }else{
                 res.status(400).send({message:"Usuario o contraseña Invalida 1"});
             }
