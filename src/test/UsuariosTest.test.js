@@ -8,39 +8,24 @@ const returnUsers = {
     "message": "Registros Encontrados",
     "result": [
       {
-        "_id": "651dc5e8016dc5b14c0bdda5",
-        "password": "$2a$10$zRiVr9OjycUc/YcDWXF/4elHo7dJglBEAfrJKhfWQ/9rJ252KGP/W",
-        "nombres": "stiven",
-        "apellidos": "barajas",
-        "email": "brayan@gmail.com",
-        "usuario": "stiven",
-      },
-      {
-        "_id": "6507ac64016dc5badc0bd4ad",
-        "password": "$2a$10$qPeMksU6eH7952T1sChsBOEJSvNYGsoPl8YXCbq62WsUxix9GtOd2",
-        "nombres": "juan",
-        "apellidos": "quiroga",
-        "email": "mq137267@gmail.com",
-        "usuario": "quiroguin"
-      },
-      {
-        "_id": "65369802016dc5360d0bde9d",
-        "password": "$2a$10$YujMM0xWAx9ms16R9/3C1./bAfWW/YL1l3XTL6ySIsKhV5Jo4LwxG",
-        "nombres": "juan",
-        "apellidos": "quiroga",
-        "email": "mq137267@gmail.co",
-        "usuario": "juan"
+        "_id": "6553ebad7213e1d73d330176",
+      "password": "$2a$10$lRnFuE7033QiScsrAtAOFOnCXMbyRENe719QyBX20WLWvhwFmMhfa",
+      "nombres": "Yura",
+      "apellidos": "Torres",
+      "email": "yura12@gmail.com",
+      "usuario": "yury",
       }
     ]
 }
 
 const FindOneMock = {
-    "_id": "651dc5e8016dc5b14c0bdda5",
-    "password": "$2a$10$zRiVr9OjycUc/YcDWXF/4elHo7dJglBEAfrJKhfWQ/9rJ252KGP/W",
-    "nombres": "stiven",
-    "apellidos": "barajas",
-    "email": "brayan@gmail.com",
-    "usuario": "stiven",
+  "_id": "6553ebad7213e1d73d330176",
+  "password": "$2a$10$lRnFuE7033QiScsrAtAOFOnCXMbyRENe719QyBX20WLWvhwFmMhfa",
+  "nombres": "Yura",
+  "apellidos": "Torres",
+  "email": "yura12@gmail.com",
+  "usuario": "yury",
+  
   };
 
 describe("Test Users Repository", ()=>{
@@ -68,7 +53,7 @@ describe("Test Users Repository", ()=>{
     })
 
     it("should one only user", ()=>{
-        const id = "651dc5e8016dc5b14c0bdda5";
+        const id = "6553ebad7213e1d73d330176";
         FindOneUser.mockReturnValueOnce(FindOneMock);
 
         const response = FindOneUser(id);
